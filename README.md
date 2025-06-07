@@ -14,7 +14,7 @@ Built with:
 
 ## Live Endpoint
 
-> `POST https://<your-deployment-url>/identify`
+> `POST https://https://bitespeed-service.onrender.com/identify`
 
 ## Tech Stack & Key Dependencies
 
