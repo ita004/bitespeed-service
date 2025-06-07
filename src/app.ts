@@ -1,5 +1,5 @@
 import express from 'express';
-import { Request, Response } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import dotenv from 'dotenv';
 import identifyRouter from './routes/identify';
 
@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/identify', identifyRouter);
 
 // Error handling middleware
-app.use((err: Error, req: Request, res: Response) => {
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   res.status((err as any).status || 500).json({ error: err.message });
 });
 
